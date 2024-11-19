@@ -119,7 +119,10 @@ namespace Lab2
 
         private void OnSaxButtonClicked(object sender, EventArgs e) => SwitchParser("SAX");
         private void OnDomButtonClicked(object sender, EventArgs e) => SwitchParser("DOM");
-        private void OnLinqButtonClicked(object sender, EventArgs e) => SwitchParser("LINQ");
+        private void OnLinqButtonClicked(object sender, EventArgs e) => SwitchParser("LINQ");   
+
+
+
 
         private void OnSearchButtonClicked(object sender, EventArgs e)
         {
