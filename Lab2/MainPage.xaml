@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Lab2.MainPage">
+    <Grid>
+        <!-- Ліва частина для кнопок -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*" />
+            <!-- Займає 1/4 простору -->
+            <ColumnDefinition Width="0.75*" />
+            <!-- Займає 3/4 простору -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Ліва панель з кнопками -->
+        <StackLayout Grid.Column="0" Padding="10">
+            <Button Text="Вихід" Clicked="OnExitButtonClicked" Margin="0,10"/>
+            <Button Text="SAX" Clicked="OnSaxButtonClicked" Margin="0,10"/>
+            <Button Text="DOM" Clicked="OnDomButtonClicked" Margin="0,10"/>
+            <Button Text="LINQ" Clicked="OnLinqButtonClicked" Margin="0,10"/>
+            <Button Text="Зберегти як HTML" Clicked="SaveHtml" Margin="0,10"/>
+            <Button Text="Коротка інформація" Clicked="OnShowDescriptionButtonClicked" Margin="0,10"/>
+        </StackLayout>
+
+        <!-- Права частина для пошуку і таблиці -->
+        <StackLayout Grid.Column="1" Padding="10">
+            <Button Text="Вибрати файл" Clicked="OnSelectFileButtonClicked" Margin="0,10"/>
+            <!-- Поле для пошуку -->
+            <Entry x:Name="SearchEntry" Placeholder="Пошук" Margin="10"/>
+            <Button Text="Пошук" Clicked="OnSearchButtonClicked" Margin="10"/>
+            <Button Text="Очистити" Clicked="OnClearButtonClicked" Margin="10"/>
+
+            <!-- Фіксовані заголовки -->
+            <Grid BackgroundColor="LightGray" Margin="10" RowSpacing="2" ColumnSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовки -->
+                <Label Text="ID" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Ім'я" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Факультет" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Кафедра" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="3"/>
+                <Label Text="Рівень освіти" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="4"/>
+                <Label Text="Університет" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="5"/>
+                <Label Text="Початок навчання" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="6"/>
+                <Label Text="Предмети" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="7"/>
+            </Grid>
+
+            <!-- Прокручуваний список даних -->
+            <CollectionView x:Name="ResultCollectionView" Margin="10,10,10,0" VerticalScrollBarVisibility="Always" HeightRequest="500">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Виведення даних -->
+                            <Label Text="{Binding Id}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="0"/>
+                            <Label Text="{Binding FullName}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="1"/>
+                            <Label Text="{Binding Faculty}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="2"/>
+                            <Label Text="{Binding Department}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="3"/>
+                            <Label Text="{Binding EducationLevel}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="4"/>
+                            <Label Text="{Binding Institution}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="5"/>
+                            <Label Text="{Binding StartDate}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="6"/>
+                            <Label Text="{Binding Subjects}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="7"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StudentsAndStaff>
+	<!-- Інформація про студентів -->
+	<Student id="1" fullName="Іванов Іван Іванович" faculty="Факультет комп'ютерних наук" department="Кафедра програмування" educationLevel="Бакалавр" institution="Львівський університет" startDate="2019-09-01">
+		<Subjects>
+			<Subject name="Основи програмування" />
+		</Subjects>
+	</Student>
+
+	<Student id="2" fullName="Петрова Марія Олександрівна" faculty="Факультет інформаційних технологій" department="Кафедра штучного інтелекту" educationLevel="Магістр" institution="Харківський університет" startDate="2018-09-01">
+		<Subjects>
+			<Subject name="Машинне навчання" />
+		</Subjects>
+	</Student>
+
+	<Student id="3" fullName="Сидоренко Олег Васильович" faculty="Факультет прикладних наук" department="Кафедра комп'ютерних наук" educationLevel="Магістр" institution="Одеситський університет" startDate="2020-09-01">
+		<Subjects>
+			<Subject name="Основи програмування" />
+		</Subjects>
+	</Student>
+
+	<Student id="4" fullName="Дмитренко Артем Сергійович" faculty="Факультет математики та кібернетики" department="Кафедра інженерії програмного забезпечення" educationLevel="Бакалавр" institution="Київський університет" startDate="2021-09-01">
+		<Subjects>
+			<Subject name="Основи програмування" />
+		</Subjects>
+	</Student>
+
+	<Student id="5" fullName="Кузьменко Дмитро Вікторович" faculty="Факультет прикладних наук" department="Кафедра інформаційних систем" educationLevel="Магістр" institution="Дніпровський університет" startDate="2022-09-01">
+		<Subjects>
+			<Subject name="Мережі та інформаційна безпека" />
+		</Subjects>
+	</Student>
+
+	<Student id="6" fullName="Тимошенко Олена Вікторівна" faculty="Факультет інформаційних технологій" department="Кафедра інформаційної безпеки" educationLevel="Бакалавр" institution="Черкаський університет" startDate="2020-09-01">
+		<Subjects>
+			<Subject name="Мережі та інформаційна безпека"/>
+		</Subjects>
+	</Student>
+
+	<Student id="7" fullName="Максимчук Олена Сергіївна" faculty="Факультет математики та кібернетики" department="Кафедра розподілених обчислень" educationLevel="Магістр" institution="Львівський університет" startDate="2019-09-01">
+		<Subjects>
+			<Subject name="Моделювання систем" />
+		</Subjects>
+	</Student>
+
+	<Student id="8" fullName="Шевченко Ярослав Миколайович" faculty="Факультет прикладних наук" department="Кафедра програмування" educationLevel="Бакалавр" institution="Київський університет" startDate="2021-09-01">
+		<Subjects>
+			<Subject name="Основи програмування" />
+		</Subjects>
+	</Student>
+
+	<Student id="9" fullName="Романенко Артем Олексійович" faculty="Факультет комп'ютерних наук" department="Кафедра програмування" educationLevel="Магістр" institution="Запорізький університет" startDate="2021-09-01">
+		<Subjects>
+			<Subject name="Основи програмування" />
+		</Subjects>
+	</Student>
+
+	<Student id="10" fullName="Яценко Ігор Павлович" faculty="Факультет інформаційних технологій" department="Кафедра комп'ютерних наук" educationLevel="Магістр" institution="Миколаївський університет" startDate="2020-09-01">
+		<Subjects>
+			<Subject name="Інтернет-технології"/>
+		</Subjects>
+	</Student>
+</StudentsAndStaff>
